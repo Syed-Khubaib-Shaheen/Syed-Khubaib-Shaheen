@@ -86,7 +86,7 @@ jobs:
                       label = escape(f'{day["date"]}: {day["contributionCount"]} contributions')
                       parts.append(f'<rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}"><title>{label}</title></rect>')
               length = max((len(route) - 1) * 14, 14)
-              duration = max(length / 45, 8)
+              duration = max(length / 120, 3)
               delay = 14 / length * duration
               for segment in (range(min(4, max(len(route)-1, 1))-1, -1, -1) if route else []):
                   begin = -duration + segment * delay
