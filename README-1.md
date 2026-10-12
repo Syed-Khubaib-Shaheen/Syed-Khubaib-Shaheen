@@ -33,6 +33,44 @@ At Community Dreams Foundation, I work on backend development and AI workflows w
 
 ---
 
+## Experience
+
+### Machine Learning Engineer | Community Dreams Foundation
+
+**2026 - Present**
+
+Developing Python and Django backend applications, REST APIs, and software components across two projects while contributing to engineering delivery.
+
+- Developed backend services and REST APIs using Python and Django, implementing CRUD operations, request validation, business logic, and reusable components.
+- Built and integrated API endpoints and backend modules for data processing, retrieval, and application features with input validation and error handling.
+- Applied object-oriented design principles to build modular and maintainable backend components with clear separation of concerns.
+- Developed unit and integration tests for backend services and API endpoints, debugging issues and validating critical application workflows.
+- Contributed to development across 2 projects within a 5-person team, coordinating implementation, testing, integration, dependencies, and delivery.
+
+![Python](https://img.shields.io/badge/Python-6D28D9?style=flat-square)
+![Django](https://img.shields.io/badge/Django-4338CA?style=flat-square)
+![NLP](https://img.shields.io/badge/NLP-7C3AED?style=flat-square)
+![REST APIs](https://img.shields.io/badge/REST_APIs-6366F1?style=flat-square)
+![Agile](https://img.shields.io/badge/Agile_%26_Scrum-312E81?style=flat-square)
+
+### AI/ML Software Engineering Intern | Shoptaki
+
+**May 2025 - August 2025**
+
+Researched and prototyped AI agent architectures for collaborative automation within a distributed system.
+
+- Evaluated LangChain and n8n-based orchestration approaches for communicating agents.
+- Designed reusable components for ingestion, transformation, external API integration, and secure automation.
+- Assessed architecture across networking, authentication, policy management, agents, deployment, and monitoring.
+- Turned research findings into technical recommendations for modular framework and orchestration design.
+
+![AI Agents](https://img.shields.io/badge/AI_Agents-6D28D9?style=flat-square)
+![LangChain](https://img.shields.io/badge/LangChain-4338CA?style=flat-square)
+![n8n](https://img.shields.io/badge/n8n-7C3AED?style=flat-square)
+![System Design](https://img.shields.io/badge/System_Design-6366F1?style=flat-square)
+
+---
+
 ## Tech Stack
 
 ### Languages
@@ -131,43 +169,6 @@ Compared machine learning approaches for congestion prediction and led developme
 
 ---
 
-## Experience
-
-### Machine Learning Engineer | Community Dreams Foundation
-
-**2026 - Present**
-
-Developing Python and Django backend applications, REST APIs, and software components across two projects while contributing to engineering delivery.
-
-- Developed backend services and REST APIs using Python and Django, implementing CRUD operations, request validation, business logic, and reusable components.
-- Built and integrated API endpoints and backend modules for data processing, retrieval, and application features with input validation and error handling.
-- Applied object-oriented design principles to build modular and maintainable backend components with clear separation of concerns.
-- Developed unit and integration tests for backend services and API endpoints, debugging issues and validating critical application workflows.
-- Contributed to development across 2 projects within a 5-person team, coordinating implementation, testing, integration, dependencies, and delivery.
-
-![Python](https://img.shields.io/badge/Python-6D28D9?style=flat-square)
-![Django](https://img.shields.io/badge/Django-4338CA?style=flat-square)
-![NLP](https://img.shields.io/badge/NLP-7C3AED?style=flat-square)
-![REST APIs](https://img.shields.io/badge/REST_APIs-6366F1?style=flat-square)
-![Agile](https://img.shields.io/badge/Agile_%26_Scrum-312E81?style=flat-square)
-
-### AI/ML Software Engineering Intern | Shoptaki
-
-**May 2025 - August 2025**
-
-Researched and prototyped AI agent architectures for collaborative automation within a distributed system.
-
-- Evaluated LangChain and n8n-based orchestration approaches for communicating agents.
-- Designed reusable components for ingestion, transformation, external API integration, and secure automation.
-- Assessed architecture across networking, authentication, policy management, agents, deployment, and monitoring.
-- Turned research findings into technical recommendations for modular framework and orchestration design.
-
-![AI Agents](https://img.shields.io/badge/AI_Agents-6D28D9?style=flat-square)
-![LangChain](https://img.shields.io/badge/LangChain-4338CA?style=flat-square)
-![n8n](https://img.shields.io/badge/n8n-7C3AED?style=flat-square)
-![System Design](https://img.shields.io/badge/System_Design-6366F1?style=flat-square)
-
----
 
 ## Achievements
 
