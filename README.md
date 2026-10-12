@@ -35,7 +35,7 @@ At Community Dreams Foundation, I work on backend development and AI workflows w
 
 ## Experience
 
-### Machine Learning Engineer | Community Dreams Foundation
+### Software Development Engineer | Community Dreams Foundation
 
 **2026 - Present**
 
