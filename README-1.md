@@ -137,13 +137,13 @@ Compared machine learning approaches for congestion prediction and led developme
 
 **2026 - Present**
 
-Developing Python backend services and AI-powered document-processing workflows, with engineering coordination across two projects.
+Developing Python and Django backend applications, REST APIs, and software components across two projects while contributing to engineering delivery.
 
-- Built a research article pipeline processing 1,000+ papers and reducing manual literature-review time by 55%.
-- Integrated preprocessing, summarization, and structured extraction of objectives, methodologies, findings, limitations, and key terms.
-- Developed Django services and REST APIs with CRUD operations, request validation, reusable components, and error handling.
-- Built unit and integration tests for backend services and API endpoints.
-- Coordinated requirements, priorities, dependencies, and delivery within a 5-person team.
+- Developed backend services and REST APIs using Python and Django, implementing CRUD operations, request validation, business logic, and reusable components.
+- Built and integrated API endpoints and backend modules for data processing, retrieval, and application features with input validation and error handling.
+- Applied object-oriented design principles to build modular and maintainable backend components with clear separation of concerns.
+- Developed unit and integration tests for backend services and API endpoints, debugging issues and validating critical application workflows.
+- Contributed to development across 2 projects within a 5-person team, coordinating implementation, testing, integration, dependencies, and delivery.
 
 ![Python](https://img.shields.io/badge/Python-6D28D9?style=flat-square)
 ![Django](https://img.shields.io/badge/Django-4338CA?style=flat-square)
@@ -201,12 +201,6 @@ Researched and prototyped AI agent architectures for collaborative automation wi
 
 ---
 
-## Coding Profiles
-
-Currently practicing data structures and algorithms in Python, including arrays, hash maps, sliding windows, and dynamic programming.
-
----
-
 ## GitHub Analytics
 
 <div align="center">
@@ -221,15 +215,6 @@ Currently practicing data structures and algorithms in Python, including arrays,
 
 ---
 
-## GitHub Trophies
-
-<div align="center">
-
-![GitHub trophies](https://github-profile-trophy.vercel.app/?username=Syed-Khubaib-Shaheen&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=12&margin-h=12)
-
-</div>
-
----
 
 ## Contribution Activity
 
@@ -282,26 +267,6 @@ jobs:
 
 ---
 
-## Current Focus
-
-```yaml
-learning:
-  - Data structures and algorithms in Python
-  - Django and REST API development
-building:
-  - Python backend services
-  - NLP research article processing workflows
-exploring:
-  - Semantic retrieval and hybrid ranking
-  - AI agent orchestration
-open_to:
-  - Software Engineering
-  - Backend Development
-  - Machine Learning Engineering
-  - Data Science
-```
-
----
 
 ## Connect
 
