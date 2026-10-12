@@ -217,12 +217,6 @@ Compared machine learning approaches for congestion prediction and led developme
 ---
 
 
-## Contribution Activity
-
-![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=Syed-Khubaib-Shaheen&bg_color=0d1117&color=a78bfa&line=818cf8&point=c4b5fd&area=true&hide_border=true)
-
----
-
 ## Contribution Snake
 
 <div align="center">
