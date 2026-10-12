@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Generate orbit animation without changing contribution cells
+      - name: Generate snake in empty contribution cells
         env:
           PROFILE_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,22 +43,55 @@ jobs:
           Path("dist").mkdir(exist_ok=True)
           for theme, colors in [("", ["#ebedf0", "#ddd6fe", "#a78bfa", "#8b5cf6", "#6d28d9"]), ("-dark", ["#161b22", "#312e81", "#4338ca", "#6d28d9", "#a78bfa"])]:
               width = 64 + 14 * len(weeks)
-              right = width - 16
-              path = f"M 16 16 H {right} V 146 H 16 Z"
-              parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} 164" role="img"><title>Contribution grid with a purple snake orbiting outside</title>']
+              empty = {(column, day["weekday"]) for column, week in enumerate(weeks) for day in week["contributionDays"] if day["contributionCount"] == 0}
+              def neighbors(cell):
+                  x, y = cell
+                  return [(x+dx, y+dy) for dx,dy in [(1,0),(0,1),(-1,0),(0,-1)] if (x+dx,y+dy) in empty]
+              remaining = set(empty)
+              components = []
+              while remaining:
+                  first = min(remaining)
+                  component, pending = {first}, [first]
+                  remaining.remove(first)
+                  while pending:
+                      for adjacent in neighbors(pending.pop()):
+                          if adjacent in remaining:
+                              remaining.remove(adjacent)
+                              component.add(adjacent)
+                              pending.append(adjacent)
+                  components.append(component)
+              route = []
+              if components:
+                  component = max(components, key=len)
+                  first = min(component)
+                  visited, route = {first}, [first]
+                  stack = [(first, iter(neighbors(first)))]
+                  while stack:
+                      cell, choices = stack[-1]
+                      adjacent = next(choices, None)
+                      if adjacent is None:
+                          stack.pop()
+                          if stack:
+                              route.append(stack[-1][0])
+                      elif adjacent not in visited:
+                          visited.add(adjacent)
+                          route.append(adjacent)
+                          stack.append((adjacent, iter(neighbors(adjacent))))
+              path = " ".join(("M" if index == 0 else "L") + f" {37+x*14} {37+y*14}" for index,(x,y) in enumerate(route))
+              parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} 164" role="img"><title>Contribution grid with a purple snake moving through empty cells</title>']
               for column, week in enumerate(weeks):
                   for day in week["contributionDays"]:
                       x, y = 32 + column * 14, 32 + day["weekday"] * 14
                       color = colors[levels[day["contributionLevel"]]]
                       label = escape(f'{day["date"]}: {day["contributionCount"]} contributions')
                       parts.append(f'<rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}"><title>{label}</title></rect>')
-              length = 2 * (right - 16 + 130)
-              duration = 24
-              delay = 12 / length * duration
-              for segment in range(7, -1, -1):
+              length = max((len(route) - 1) * 14, 14)
+              duration = max(length / 45, 8)
+              delay = 14 / length * duration
+              for segment in (range(min(4, max(len(route)-1, 1))-1, -1, -1) if route else []):
                   begin = -duration + segment * delay
                   color = "#c4b5fd" if segment == 0 else "#8b5cf6"
-                  parts.append(f'<g><animateMotion path="{path}" dur="{duration}s" begin="{begin:.6f}s" repeatCount="indefinite" rotate="auto"/><rect x="-5" y="-5" width="10" height="10" rx="3" fill="{color}"/>')
+                  parts.append(f'<g><animateMotion path="{path}" dur="{duration}s" begin="{begin:.6f}s" repeatCount="indefinite" rotate="auto"/><rect x="-4" y="-4" width="8" height="8" rx="2" fill="{color}"/>')
                   if segment == 0:
                       parts.append('<circle cx="2" cy="-2" r="1" fill="#312e81"/><circle cx="2" cy="2" r="1" fill="#312e81"/>')
                   parts.append('</g>')
