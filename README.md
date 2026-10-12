@@ -7,7 +7,6 @@
 ![MS Software Engineering](https://img.shields.io/badge/MS-Software_Engineering-6D28D9?style=flat-square)
 ![Arizona State University](https://img.shields.io/badge/Arizona_State_University-Class_of_2026-4338CA?style=flat-square)
 ![BTech CSE](https://img.shields.io/badge/B.Tech-Computer_Science_%26_Engineering-7C3AED?style=flat-square)
-![Location](https://img.shields.io/badge/Location-Arlington%2C_TX-312E81?style=flat-square)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-6366F1?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khubaibsyed)
 [![Email](https://img.shields.io/badge/Email-Let%27s_Talk-7C3AED?style=for-the-badge&logo=gmail&logoColor=white)](mailto:snola347@asu.edu)
@@ -23,7 +22,7 @@
 
 ## About
 
-I am a software engineer and machine learning engineer based in Arlington, Texas, with an MS in Software Engineering from Arizona State University. I build Python backends, REST APIs, and AI-powered applications, with experience connecting data processing and retrieval systems to user-facing features.
+I am a software engineer and machine learning engineer, with an MS in Software Engineering from Arizona State University. I build Python backends, REST APIs, and AI-powered applications, with experience connecting data processing and retrieval systems to user-facing features.
 
 My work includes Django backend services, NLP research-paper processing, semantic image search, and machine learning applications. I enjoy working across the application stack, from preprocessing and database integration to API behavior and the interface people use. I care about reusable components, testing, and making software useful beyond a notebook.
 
