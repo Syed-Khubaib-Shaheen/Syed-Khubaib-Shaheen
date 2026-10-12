@@ -88,9 +88,9 @@ jobs:
               length = max((len(route) - 1) * 14, 14)
               duration = max(length / 120, 3)
               delay = 14 / length * duration
-              for segment in (range(min(4, max(len(route)-1, 1))-1, -1, -1) if route else []):
+              for segment in (range(min(6, max(len(route)-1, 1))-1, -1, -1) if route else []):
                   begin = -duration + segment * delay
-                  color = "#c4b5fd" if segment == 0 else "#8b5cf6"
+                  color = "#FFF00" if segment == 0 else "#FF8C00"
                   parts.append(f'<g><animateMotion path="{path}" dur="{duration}s" begin="{begin:.6f}s" repeatCount="indefinite" rotate="auto"/><rect x="-4" y="-4" width="8" height="8" rx="2" fill="{color}"/>')
                   if segment == 0:
                       parts.append('<circle cx="2" cy="-2" r="1" fill="#312e81"/><circle cx="2" cy="2" r="1" fill="#312e81"/>')
