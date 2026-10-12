@@ -5,10 +5,8 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/snake.yml
+    branches: [main]
+    paths: [.github/workflows/snake.yml]
 
 permissions:
   contents: write
@@ -22,15 +20,51 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Generate contribution SVGs
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=#7c3aed&color_dots=#ebedf0,#ddd6fe,#a78bfa,#8b5cf6,#6d28d9
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#a78bfa&color_dots=#161b22,#312e81,#4338ca,#6d28d9,#a78bfa
+      - name: Generate orbit animation without changing contribution cells
         env:
+          PROFILE_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from xml.sax.saxutils import escape
+          
+          query = """query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar { weeks { contributionDays { date contributionCount contributionLevel weekday } } } } } }"""
+          request = Request("https://api.github.com/graphql", data=json.dumps({"query": query, "variables": {"login": os.environ["PROFILE_USER"]}}).encode(), headers={"Authorization": "Bearer " + os.environ["GITHUB_TOKEN"], "Content-Type": "application/json", "User-Agent": "profile-contribution-orbit"})
+          with urlopen(request, timeout=60) as response:
+              data = json.load(response)
+          if data.get("errors"):
+              raise RuntimeError("GitHub contribution query failed")
+          weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+          levels = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
+          Path("dist").mkdir(exist_ok=True)
+          for theme, colors in [("", ["#ebedf0", "#ddd6fe", "#a78bfa", "#8b5cf6", "#6d28d9"]), ("-dark", ["#161b22", "#312e81", "#4338ca", "#6d28d9", "#a78bfa"])]:
+              width = 64 + 14 * len(weeks)
+              right = width - 16
+              path = f"M 16 16 H {right} V 146 H 16 Z"
+              parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} 164" role="img"><title>Contribution grid with a purple snake orbiting outside</title>']
+              for column, week in enumerate(weeks):
+                  for day in week["contributionDays"]:
+                      x, y = 32 + column * 14, 32 + day["weekday"] * 14
+                      color = colors[levels[day["contributionLevel"]]]
+                      label = escape(f'{day["date"]}: {day["contributionCount"]} contributions')
+                      parts.append(f'<rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{color}"><title>{label}</title></rect>')
+              length = 2 * (right - 16 + 130)
+              duration = 24
+              delay = 12 / length * duration
+              for segment in range(7, -1, -1):
+                  begin = -duration + segment * delay
+                  color = "#c4b5fd" if segment == 0 else "#8b5cf6"
+                  parts.append(f'<g><animateMotion path="{path}" dur="{duration}s" begin="{begin:.6f}s" repeatCount="indefinite" rotate="auto"/><rect x="-5" y="-5" width="10" height="10" rx="3" fill="{color}"/>')
+                  if segment == 0:
+                      parts.append('<circle cx="2" cy="-2" r="1" fill="#312e81"/><circle cx="2" cy="2" r="1" fill="#312e81"/>')
+                  parts.append('</g>')
+              parts.append('</svg>')
+              Path(f"dist/github-snake{theme}.svg").write_text("".join(parts))
+          PYTHON
       - name: Publish SVGs to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
