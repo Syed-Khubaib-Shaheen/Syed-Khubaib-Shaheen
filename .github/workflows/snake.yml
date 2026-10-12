@@ -41,7 +41,7 @@ jobs:
           weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
           levels = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
           Path("dist").mkdir(exist_ok=True)
-          for theme, colors in [("", ["#ebedf0", "#ddd6fe", "#a78bfa", "#8b5cf6", "#6d28d9"]), ("-dark", ["#161b22", "#312e81", "#4338ca", "#6d28d9", "#a78bfa"])]:
+          for theme, colors in [("", ["#ebedf0", "#a78bfa", "#8b5cf6", "#6d28d9", "#4c1d95"]), ("-dark", ["#161b22", "#312e81", "#4338ca", "#6d28d9", "#a78bfa"])]:
               width = 64 + 14 * len(weeks)
               empty = {(column, day["weekday"]) for column, week in enumerate(weeks) for day in week["contributionDays"] if day["contributionCount"] == 0}
               def neighbors(cell):
