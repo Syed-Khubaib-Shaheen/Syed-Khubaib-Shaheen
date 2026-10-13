@@ -12,9 +12,6 @@
 [![Email](https://img.shields.io/badge/Email-Let%27s_Talk-7C3AED?style=for-the-badge&logo=gmail&logoColor=white)](mailto:snola347@asu.edu)
 [![GitHub](https://img.shields.io/badge/GitHub-Explore_Projects-4338CA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Syed-Khubaib-Shaheen?tab=repositories)
 
-![Profile views](https://komarev.com/ghpvc/?username=Syed-Khubaib-Shaheen&label=Profile%20views&color=7c3aed&style=flat-square)
-[![Followers](https://img.shields.io/github/followers/Syed-Khubaib-Shaheen?label=Followers&style=flat-square&color=6366f1)](https://github.com/Syed-Khubaib-Shaheen?tab=followers)
-[![Stars](https://img.shields.io/github/stars/Syed-Khubaib-Shaheen?label=Stars&style=flat-square&color=8b5cf6)](https://github.com/Syed-Khubaib-Shaheen?tab=repositories)
 
 </div>
 
