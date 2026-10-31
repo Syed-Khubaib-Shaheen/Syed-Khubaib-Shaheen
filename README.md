@@ -93,20 +93,6 @@ Researched and prototyped AI agent architectures for collaborative automation wi
 
 ---
 
-## AI / ML Expertise
-
-| Domain | Proficiency | Details |
-| :--- | :--- | :--- |
-| Natural language processing | Applied project experience | Text preprocessing, feature extraction, classification, summarization, and structured extraction |
-| Semantic retrieval | Applied project experience | OpenCLIP embeddings, ChromaDB vector search, hybrid ranking, and result deduplication |
-| Predictive modeling | Applied project experience | Random Forest, regression, SVM, KNN, Decision Trees, and CNNs |
-| ML frameworks | Development toolkit | Scikit-learn, PyTorch, and TensorFlow |
-| Data processing | Applied project experience | Pandas, NumPy, asynchronous ingestion, batching, and multithreaded processing |
-| AI agent systems | Internship research and prototyping | LangChain, n8n, modular agent design, API integration, and orchestration trade-offs |
-| Data visualization | Development toolkit | Matplotlib, Seaborn, Tableau, and Power BI |
-
----
-
 ## Featured Projects
 
 <details open>
@@ -180,6 +166,20 @@ A machine learning application for analyzing and predicting urban traffic conges
 Compared machine learning approaches for congestion prediction and led development of a Flask web application that presents traffic insights through geospatial visualization.
 
 </details>
+
+---
+
+## AI / ML Expertise
+
+| Domain | Proficiency | Details |
+| :--- | :--- | :--- |
+| Natural language processing | Applied project experience | Text preprocessing, feature extraction, classification, summarization, and structured extraction |
+| Semantic retrieval | Applied project experience | OpenCLIP embeddings, ChromaDB vector search, hybrid ranking, and result deduplication |
+| Predictive modeling | Applied project experience | Random Forest, regression, SVM, KNN, Decision Trees, and CNNs |
+| ML frameworks | Development toolkit | Scikit-learn, PyTorch, and TensorFlow |
+| Data processing | Applied project experience | Pandas, NumPy, asynchronous ingestion, batching, and multithreaded processing |
+| AI agent systems | Internship research and prototyping | LangChain, n8n, modular agent design, API integration, and orchestration trade-offs |
+| Data visualization | Development toolkit | Matplotlib, Seaborn, Tableau, and Power BI |
 
 ---
 
