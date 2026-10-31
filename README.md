@@ -128,6 +128,24 @@ Built asynchronous ingestion and hybrid retrieval pipelines spanning Wikimedia, 
 </details>
 
 <details>
+<summary><strong>FastAPI Books API | Backend Development</strong></summary>
+
+A database-backed REST API for managing books with user accounts and ownership-based permissions.
+
+| Area | Details |
+| :--- | :--- |
+| Stack | Python, FastAPI, SQLite, Pydantic, PyJWT, Argon2, pytest |
+| API features | CRUD operations, author filtering, pagination, title sorting, and total book count |
+| Authentication | User registration, Argon2 password hashing, and JWT access tokens with 30-minute expiration |
+| Authorization | Public book retrieval; only a book's owner can update or delete it |
+| Testing | 22 automated tests covering CRUD, validation, authentication, query behavior, and ownership using isolated test databases |
+| Repository | [FastAPI Books API](https://github.com/Syed-Khubaib-Shaheen/fastapi-books-api) |
+
+Built persistent SQLite storage, validated request models, and reusable authentication checks. Added tests for expired and tampered tokens, missing records, partial updates, and attempts to modify another user's book.
+
+</details>
+
+<details>
 <summary><strong>Emotive Insight | News Article Classification</strong></summary>
 
 An NLP application for automated news categorization and user-facing news insights.
