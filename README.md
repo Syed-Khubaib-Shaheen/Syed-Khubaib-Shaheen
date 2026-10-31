@@ -87,9 +87,9 @@ Researched and prototyped AI agent architectures for collaborative automation wi
 
 ### Cloud, DevOps & Tooling
 
-[![Development tools](https://skillicons.dev/icons?i=git,github&theme=dark)](https://skillicons.dev)
+[![Cloud and development tools](https://skillicons.dev/icons?i=aws,git,github&theme=dark)](https://skillicons.dev)
 
-**Git · GitHub · Jupyter Notebooks · JIRA · Agile · Scrum · Kafka · Apache Spark**
+**AWS · Git · GitHub · Jupyter Notebooks · JIRA · Agile · Scrum · Kafka · Apache Spark**
 
 ---
 
